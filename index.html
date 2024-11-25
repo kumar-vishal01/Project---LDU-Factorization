@@ -29,26 +29,7 @@
     
 
     <script>
-        function getMatrixInput() {
-            const dimension = document.getElementById("dimension").value;
-            const matrixInput = document.getElementById("matrixInput");
-            matrixInput.innerHTML = '';
-
-            if (dimension >= 2 && dimension <= 10) {
-                for (let i = 0; i < dimension; i++) {
-                    for (let j = 0; j < dimension; j++) {
-                        matrixInput.innerHTML += `<input type="number" placeholder="A[${i+1},${j+1}]" class="matrix-element">`;
-                    }
-                    matrixInput.innerHTML += '<br>';
-                }
-            } else {
-                alert("Please enter a valid dimension between 2 and 10.");
-            }
-        }
-
-        function calculateLDU() {
-            alert("Unable to calculate.");
-        }
+      
     </script>
 </body>
 </html>
