@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LDU Factorization Calculator</title>
-    <link rel="stylesheet" href="index.css">
+    <title>LDU Factorization with Row Elimination Steps</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>LDU Factorization Calculator</h1>
-        <form id="matrixForm">
-            <label for="dimension">Enter the dimension of the matrix:</label>
-            <input type="number" id="dimension" min="2" max="10" placeholder="Enter Number">
-            <button type="button" onclick="getMatrixInput()">Submit</button>
-        </form>
-        <div id="matrixInput"></div>
-        <button class="calculate-btn" type="button" onclick="calculateLDU()">Calculate</button>
+    <h1><center>LDU Factorization Calculation</center></h1>
+    <div class="matrix-container">
+        <label>Enter Matrix Size (n x n):</label>
+        <input type="number" id="matrix-size" min="2" placeholder="Size of Matrix"><br>
+        <br>
+        <button onclick="generateMatrixInput()">Generate Matrix</button>
     </div>
+    <div id="matrix-inputs" class="matrixcontainer"></div>
 
-    <!-- Meet the Team Button -->
-    <div class="bottom-left">
-        <button onclick="window.location.href='team.html'">Meet the Team</button>
-    </div>
+    <center>
+    <button id="lducalculate" onclick="calculateLDU()" style="display: none;" >Calculate LDU with Steps</button>
+    <div id="steps-output" class="steps-output"></div>
+    <div id="output" class="output"></div></center>
+</div>
+<!-- Meet the Team Button -->
+<div class="bottom-left">
+    <button onclick="window.location.href='team.html'">Meet the Team</button>
+</div>
 <!--Github-->
-    <div class="bottom-right">
-        <button onclick="window.location.href='https://github.com/kumar-vishal01/Project---LDU-Factorization'">Click TO See Github</button>
-    </div>
-    
+<div class="bottom-right">
+    <button onclick="window.location.href='https://github.com/kumar-vishal01/Project---LDU-Factorization'">Click To See Github</button>
+</div>
 
-    <script>
-      
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
